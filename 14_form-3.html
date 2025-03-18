@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 너비 변경 */
+    label{
+      display: inline-block;
+      width: 100px;
+    }
+    /* 목록 표기 없애기. 항목 앞에 있는 기호 제거 */
+    ul {
+      list-style: none;
+    }
+    /* 항목 높이 변경 */
+    li {
+      line-height: 37px;
+    }
+  </style>
+</head>
+<body>
+  
+  <h3>회원가입폼2</h3>
+  <!-- action과 method: 데이터를 전송할 서버와 주소 -->
+  <form action="localhost:8080/register" method="post">
+
+  <!-- 폼 안에서 관련된 필드를 묶음 때 사용 -->
+  <fieldset>
+    <legend>사용자 정보</legend> <!-- 필드셋 제목 -->
+    <!-- ul과 li: 목록 -->
+    <ul>
+      <li>
+        <label for="id">아이디</label>
+        <!-- autofocus: 화면이 열릴때 자동 포커스 -->
+        <!-- placeholder: 사용자 입력을 위한 hint -->
+         <!-- required: 반드시 입력해야하는 필드 -->
+        <input type="text" id="id" name="id" placeholder="4~10자 사이, 공백없이 입력" required>
+      </li>
+      <li>
+        <label for="mail">이메일</label>
+        <!-- type="email" 메일 패턴이 맞는지 검사 -->
+        <input type="email" id="mail" name="mail" required>
+      </li>
+      <li>
+        <label for="pw">패스워드</label>
+        <input type="password" id="pw" name="pw" placeholder="문자와,숫자 특수기호가 포함되어야함" required>
+      </li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <!-- name을 사용하여 라디오버튼을 그룹화 -->
+     <!-- 라디오버튼은 하나만 선택 가능 -->
+    <legend>이벤트와 새로운 소식</legend>
+    <input type="radio" id="mail_y" name="mail">
+    <label for="mail_y">메일 수신</label>
+    <input type="radio" id="mail_n" name="mail" checked> <!-- 기본값 -->
+    <label for="mail_n">메일 수신 안함</label>
+  </fieldset>
+
+  <input type="submit" value="가입하기">
+  <input type="reset" value="가입취소">
+</form>
+</body>
+</html>

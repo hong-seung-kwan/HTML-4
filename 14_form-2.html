@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 인라인 요소는 크기를 변경할 수 없다 */
+    label{
+      display: inline-block; /* 변경 가능 */
+      width: 100px; 
+    }
+    input {
+      border: 1px solid gray;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h3>로그인폼</h3>
+  <form action="localhost:8080/register" method="post">
+    <!-- fieldset: 폼안에서 관련된 입력필드를 묶을 때 사용 -->
+    <fieldset>
+      <legend>로그인</legend> <!-- 필드셋의 제목-->
+      <p>
+        <label for="user_id">ID</label>
+        <!-- 데이터를 전송하기 위해 입력필드에 name 추가 -->
+        <input type="text" id="user_id" name="uid">
+      </p>
+      <p>
+        <label for="user_pw">PW</label>
+        <input type="password" id="user_pw" name="upw">
+
+      </p>
+    </fieldset>
+    <input type="submit" value="확인">
+    <input type="reset" value="취소">
+
+  </form>
+</body>
+
+</html>
+
