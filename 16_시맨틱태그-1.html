@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      border: 1px solid;
+      padding: 10px;
+    }
+    /* 아이디 선택자 */
+    #main {
+      /* main div의 자식들을 가로로 정렬 */
+      display: flex;
+      
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- div: 화면의 영역을 구분하기 위해 사용함 -->
+
+  <div>헤더</div> <!-- 사이트의 로고, 검색창-->
+  <div>네비게이션</div> <!-- 메뉴 -->
+  <!-- 컨텐츠(본문) -->
+  <div id="main">메인
+    <div>컨텐츠1</div>
+    <div>컨텐츠2</div>
+  </div> 
+  <div>푸터</div> <!-- 사이트맵, 연락처 -->
+
+</body>
+</html>
+
+<!-- 
+div는 블록요소
+요소들이 수직으로 정렬됨
+-->
+<!-- 
+시멘틱 태그 없이 div만 사용하면 의미를 해석하기 어렵다
+-->

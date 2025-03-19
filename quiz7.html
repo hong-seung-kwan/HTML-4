@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 5px;
+    }
+    header,main,footer{
+      border: 1px solid;
+    }
+    section{
+      padding: 5px;
+    }
+    table{
+      border-collapse: collapse;
+    }
+    th,td{
+      border: 1px solid;
+      padding: 5px;
+      text-align: center;
+    }
+    main{
+      display: flex;
+    }
+    a{
+      color: blue;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h3>영화 리뷰 페이지</h3>
+    <nav>
+    <ul id="list">
+      <li ><a href="">홈</a></li>
+      <li ><a href="">영화 목록</a></li>
+      <li ><a href="">문의하기</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+    <section>
+      <h3>영화 정보</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>제목</th>
+            <th>감독</th>
+            <th>개봉 연도</th>
+            <th>평점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>인셉션</td>
+            <td>크리스토퍼 놀란</td>
+            <td>2010</td>
+            <td>9.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h3>주요 출연진</h3>
+      <ul>
+        <li>레오나르도 디카프리오</li>
+        <li>조셉 고든 레빗</li>
+        <li>톰 하디</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <!-- onclick: 버튼을 클릭했을 때 수행할 코드 -->
+    <button onclick="alert('리뷰가 제출되었습니다!')">리뷰 작성</button>
+    <div>&copy;2025 영화 리뷰 사이트.모든 권리 보유</div>
+  </footer>
+</body>
+</html>
